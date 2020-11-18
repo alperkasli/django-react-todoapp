@@ -1,0 +1,30 @@
+.border-left-primary {
+	border-left: 0.25rem solid #007BFF !important;
+}
+
+.border-left-secondary {
+	border-left: 0.25rem solid #6c757d !important;
+}
+
+.border-left-success {
+	border-left: 0.25rem solid #28a745 !important;
+}
+
+.border-left-info {
+	border-left: 0.25rem solid #17a2b8 !important;
+}
+
+.blurred-container {
+	filter: blur(2px);
+    pointer-events: none;
+}
+.blurred-container-inner{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
