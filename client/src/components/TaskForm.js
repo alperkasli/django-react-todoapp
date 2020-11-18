@@ -26,6 +26,7 @@ const TaskForm = ({ submitCallback }) => {
 		e.preventDefault();
 		if(formData.category_id === ''){
 			setCategoryError(true)
+			return
 		}
 		console.log(formData);
 		todoApis.addTodo(formData).then((res) => {
@@ -59,7 +60,7 @@ const TaskForm = ({ submitCallback }) => {
 				<Col md={6}>
 					<FormGroup>
 						<TaskCategories handleCategorySelect={setFormData} />
-						{!categoryError && <FormFeedback className="d-block" color="danger">Please select category first.</FormFeedback>}
+						{categoryError && <FormFeedback className="d-block" color="danger">Please select category first.</FormFeedback>}
 					</FormGroup>
 				</Col>
 				<Col md={6}>
